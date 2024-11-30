@@ -88,3 +88,69 @@ eslint, globals, @eslint/js, typescript-eslint
 √ Which package manager do you want to use? · npm
 
 
+
+- Ultimate running code 
+```
+node .\dist\server.js
+```
+
+## Pretter with ESLint
+
+```
+npm install --save-dev prettier
+to fixed prettier
+npx prettier --write src
+```
+
+```
+ctrl + shift + p -----> Developer: Reload window
+after adding the extention
+```
+
+ - use this so that prettier and eslint will not fight
+ ```
+ npm install --save-dev eslint-config-prettier
+ ```
+
+ - To run easily 
+ ```
+npm install ts-node-dev --save-dev
+ to run
+npx ts-node-dev --respawn --transpile-only src/server.ts
+
+ ```
+
+ - To run by nodemon
+ ```
+ step 1:
+ npm install ts-node nodemon --save-dev
+
+ step 2: nodemon.json
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "exec": "ts-node src/server.ts"
+}
+
+step 3: package.json
+{
+  "scripts": {
+    "dev": "nodemon"
+  }
+}
+
+step 4 : run code 
+npm run dev
+
+```
+
+
+## Validator
+```
+npm i -D  @types/validator  
+```
+
+## Installing Joi
+```
+npm i joi
+```
