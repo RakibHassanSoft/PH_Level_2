@@ -154,3 +154,8 @@ npm i -D  @types/validator
 ```
 npm i joi
 ```
+
+## cashing related problem then 
+```
+npx kill-port 5000
+```
